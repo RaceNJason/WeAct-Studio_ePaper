@@ -1,0 +1,16 @@
+..........
+
+# Must include this after copying the custom_components folder into your ESPHome configurations folder (or esphome folder in your home assistant installation)
+external_components:
+  - source: custom_components
+
+..........
+
+# Only choose one model of course...
+display:
+  - platform: waveshare_epaper
+    id: epaper_disp
+    model: 4.20in3c         # BWR   400x300
+    model: 4.20in           # BW    400x300
+    model: 2.90in3c         # BWR   296x128
+    
