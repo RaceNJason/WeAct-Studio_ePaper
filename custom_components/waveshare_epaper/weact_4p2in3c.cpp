@@ -28,16 +28,16 @@ static const uint8_t SLEEP[] = {0x10, 0x01};
 static const uint8_t UPDATE_FULL[] = {0x22, 0xF7};
 
 // Configuration commands
-static const uint8_t DRV_OUT_CTL[] = {0x01, 0x27, 0x01, 0x00};  // driver output control
-static const uint8_t DATA_ENTRY[] = {0x11, 0x03};               // data entry mode
-static const uint8_t BORDER_FULL[] = {0x3C, 0x05};              // border waveform
+static const uint8_t DRV_OUT_CTL[] = {0x01, 0x2B, 0x01, 0x00};  // Driver output control
+static const uint8_t DATA_ENTRY[] = {0x11, 0x03};               // Data entry mode 0x03 = Left to Right, Top to Bottom
+static const uint8_t BORDER_FULL[] = {0x3C, 0x05};              // Border waveform control
 static const uint8_t TEMP_SENS[] = {0x18, 0x80};                // use internal temp sensor
 static const uint8_t DISPLAY_UPDATE[] = {0x21, 0x00, 0x80};     // display update control
 
 // For controlling which part of the image we want to write
-static const uint8_t RAM_X_RANGE[] = {0x44, 0x00, WIDTH / 8u - 1};
-static const uint8_t RAM_Y_RANGE[] = {0x45, 0x00, 0x00, (uint8_t) HEIGHT - 1, (uint8_t) (HEIGHT >> 8)};
-static const uint8_t RAM_X_POS[] = {0x4E, 0x00};  // Always start at 0
+static const uint8_t RAM_X_RANGE[] = {0x44, 0x00, (((WIDTH / 8u) - 1) & 0xFF)};
+static const uint8_t RAM_Y_RANGE[] = {0x45, 0x00, 0x00, ((HEIGHT - 1) & 0xFF), ((HEIGHT >> 8) & 0xFF)};
+static const uint8_t RAM_X_POS[] = {0x4E, 0x00};                // Always start at 0
 static const uint8_t RAM_Y_POS = 0x4F;
 
 #define SEND(x) this->cmd_data(x, sizeof(x))
@@ -102,8 +102,8 @@ void WeActEPaper4P2In3C::set_window_(int t, int b) {
 
   uint8_t buffer[3];
   buffer[0] = RAM_Y_POS;
-  buffer[1] = (uint8_t) t % 256;
-  buffer[2] = (uint8_t) (t / 256);
+  buffer[1] = (uint8_t)(t % 256);
+  buffer[2] = (uint8_t)(t / 256);
   SEND(buffer);
 }
 
