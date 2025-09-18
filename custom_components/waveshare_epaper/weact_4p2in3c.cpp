@@ -55,7 +55,7 @@ void WeActEPaper4P2In3C::dump_config() {
   LOG_PIN("  Reset Pin: ", this->reset_pin_)
   LOG_PIN("  DC Pin: ", this->dc_pin_)
   LOG_PIN("  Busy Pin: ", this->busy_pin_)
-  LOG_UPDATE_INTERVAL(this)
+  LOG_UPDATE_INTERVAL(this);
 }
 
 // Device lifecycle
