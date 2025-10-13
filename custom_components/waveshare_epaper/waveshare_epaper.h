@@ -25,6 +25,9 @@ class WaveshareEPaperBase : public display::DisplayBuffer,
   virtual void initialize() = 0;
   virtual void deep_sleep() = 0;
 
+  // Exposing the busy pin on the display allows for efficient sleep code to maximize battery life...otherwise activating sleep before the display has finished "it's" updating causes it to stop
+  int is_display_busy() { return (this->busy_pin_ == nullptr ? -1 : this->busy_pin_->digital_read()); }
+
   void update() override;
 
   void setup() override {
