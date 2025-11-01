@@ -1,6 +1,6 @@
 #pragma once
 
-#include "waveshare_epaper.h"
+#include "weact_epaper.h"
 
 namespace esphome {
 namespace weact_epaper {
