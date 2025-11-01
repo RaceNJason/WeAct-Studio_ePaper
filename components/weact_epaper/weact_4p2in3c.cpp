@@ -1,9 +1,9 @@
-#include "waveshare_epaper.h"
+#include "weact_epaper.h"
 #include "esphome/core/log.h"
 #include "esphome/core/application.h"
 
 namespace esphome {
-namespace waveshare_epaper {
+namespace weact_epaper {
 
 // It's worth adding some notes for this implementation
 // - This display doesn't ship with a LUT, instead it relies on the internal values set during OTP
@@ -166,5 +166,5 @@ void WeActEPaper4P2In3C::display() {
   this->full_update_();
 }
 
-}  // namespace waveshare_epaper
+}  // namespace weact_epaper
 }  // namespace esphome

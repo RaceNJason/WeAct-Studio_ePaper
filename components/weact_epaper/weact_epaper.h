@@ -5,7 +5,7 @@
 #include "esphome/components/display/display_buffer.h"
 
 namespace esphome {
-namespace waveshare_epaper {
+namespace weact_epaper {
 
 class WaveshareEPaperBase : public display::DisplayBuffer,
                             public spi::SPIDevice<spi::BIT_ORDER_MSB_FIRST, spi::CLOCK_POLARITY_LOW,
@@ -769,5 +769,5 @@ class WeActEPaper4P2In3C : public WaveshareEPaperBWR {
   uint32_t at_update_{0};
   bool is_busy_{false};
 };
-}  // namespace waveshare_epaper
+}  // namespace weact_epaper
 }  // namespace esphome

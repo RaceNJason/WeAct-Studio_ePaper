@@ -3,7 +3,7 @@
 #include "waveshare_epaper.h"
 
 namespace esphome {
-namespace waveshare_epaper {
+namespace weact_epaper {
 
 enum DisplayMode { MODE_PARTIAL = 0, MODE_FULL, MODE_FAST, MODE_GRAYSCALE4 };
 
@@ -41,5 +41,5 @@ class WaveshareEPaper4P2InV2 : public WaveshareEPaper {
   DisplayMode display_mode_{MODE_FAST};
 };
 
-}  // namespace waveshare_epaper
+}  // namespace weact_epaper
 }  // namespace esphome

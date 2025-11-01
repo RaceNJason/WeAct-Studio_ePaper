@@ -1,11 +1,11 @@
-#include "waveshare_epaper.h"
+#include "weact_epaper.h"
 #include "esphome/core/log.h"
 #include "esphome/core/application.h"
 #include "esphome/core/helpers.h"
 #include <cinttypes>
 
 namespace esphome {
-namespace waveshare_epaper {
+namespace weact_epaper {
 
 static const char *const TAG = "waveshare_epaper";
 
@@ -2574,5 +2574,5 @@ void WaveshareEPaper2P13InDKE::set_full_update_every(uint32_t full_update_every)
   this->full_update_every_ = full_update_every;
 }
 
-}  // namespace waveshare_epaper
+}  // namespace weact_epaper
 }  // namespace esphome

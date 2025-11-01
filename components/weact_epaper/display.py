@@ -18,125 +18,125 @@ CONF_DISPLAY_MODE = "display_mode"
 
 DEPENDENCIES = ["spi"]
 
-waveshare_epaper_ns = cg.esphome_ns.namespace("waveshare_epaper")
-WaveshareEPaperBase = waveshare_epaper_ns.class_(
+weact_epaper_ns = cg.esphome_ns.namespace("weact_epaper")
+WaveshareEPaperBase = weact_epaper_ns.class_(
     "WaveshareEPaperBase", cg.PollingComponent, spi.SPIDevice, display.DisplayBuffer
 )
-WaveshareEPaper = waveshare_epaper_ns.class_("WaveshareEPaper", WaveshareEPaperBase)
-WaveshareEPaperBWR = waveshare_epaper_ns.class_(
+WaveshareEPaper = weact_epaper_ns.class_("WaveshareEPaper", WaveshareEPaperBase)
+WaveshareEPaperBWR = weact_epaper_ns.class_(
     "WaveshareEPaperBWR", WaveshareEPaperBase
 )
-WaveshareEPaper7C = waveshare_epaper_ns.class_("WaveshareEPaper7C", WaveshareEPaperBase)
-WaveshareEPaperTypeA = waveshare_epaper_ns.class_(
+WaveshareEPaper7C = weact_epaper_ns.class_("WaveshareEPaper7C", WaveshareEPaperBase)
+WaveshareEPaperTypeA = weact_epaper_ns.class_(
     "WaveshareEPaperTypeA", WaveshareEPaper
 )
-WaveshareEpaper1P54INBV2 = waveshare_epaper_ns.class_(
+WaveshareEpaper1P54INBV2 = weact_epaper_ns.class_(
     "WaveshareEPaper1P54InBV2", WaveshareEPaperBWR
 )
-WaveshareEPaper2P7In = waveshare_epaper_ns.class_(
+WaveshareEPaper2P7In = weact_epaper_ns.class_(
     "WaveshareEPaper2P7In", WaveshareEPaper
 )
-WaveshareEPaper2P7InB = waveshare_epaper_ns.class_(
+WaveshareEPaper2P7InB = weact_epaper_ns.class_(
     "WaveshareEPaper2P7InB", WaveshareEPaperBWR
 )
-WaveshareEPaper2P7InBV2 = waveshare_epaper_ns.class_(
+WaveshareEPaper2P7InBV2 = weact_epaper_ns.class_(
     "WaveshareEPaper2P7InBV2", WaveshareEPaperBWR
 )
-WaveshareEPaper2P7InV2 = waveshare_epaper_ns.class_(
+WaveshareEPaper2P7InV2 = weact_epaper_ns.class_(
     "WaveshareEPaper2P7InV2", WaveshareEPaper
 )
-WaveshareEPaper2P9InB = waveshare_epaper_ns.class_(
+WaveshareEPaper2P9InB = weact_epaper_ns.class_(
     "WaveshareEPaper2P9InB", WaveshareEPaper
 )
-WaveshareEPaper2P9InBV3 = waveshare_epaper_ns.class_(
+WaveshareEPaper2P9InBV3 = weact_epaper_ns.class_(
     "WaveshareEPaper2P9InBV3", WaveshareEPaper
 )
-WaveshareEPaper2P9InV2R2 = waveshare_epaper_ns.class_(
+WaveshareEPaper2P9InV2R2 = weact_epaper_ns.class_(
     "WaveshareEPaper2P9InV2R2", WaveshareEPaper
 )
-GDEW029T5 = waveshare_epaper_ns.class_("GDEW029T5", WaveshareEPaper)
-GDEY029T94 = waveshare_epaper_ns.class_("GDEY029T94", WaveshareEPaper)
-WaveshareEPaper2P9InDKE = waveshare_epaper_ns.class_(
+GDEW029T5 = weact_epaper_ns.class_("GDEW029T5", WaveshareEPaper)
+GDEY029T94 = weact_epaper_ns.class_("GDEY029T94", WaveshareEPaper)
+WaveshareEPaper2P9InDKE = weact_epaper_ns.class_(
     "WaveshareEPaper2P9InDKE", WaveshareEPaper
 )
-GDEY042T81 = waveshare_epaper_ns.class_("GDEY042T81", WaveshareEPaper)
-WaveshareEPaper2P9InD = waveshare_epaper_ns.class_(
+GDEY042T81 = weact_epaper_ns.class_("GDEY042T81", WaveshareEPaper)
+WaveshareEPaper2P9InD = weact_epaper_ns.class_(
     "WaveshareEPaper2P9InD", WaveshareEPaper
 )
-WaveshareEPaper4P2In = waveshare_epaper_ns.class_(
+WaveshareEPaper4P2In = weact_epaper_ns.class_(
     "WaveshareEPaper4P2In", WaveshareEPaper
 )
-WaveshareEPaper4P2InBV2 = waveshare_epaper_ns.class_(
+WaveshareEPaper4P2InBV2 = weact_epaper_ns.class_(
     "WaveshareEPaper4P2InBV2", WaveshareEPaper
 )
-WaveshareEPaper4P2InV2 = waveshare_epaper_ns.class_(
+WaveshareEPaper4P2InV2 = weact_epaper_ns.class_(
     "WaveshareEPaper4P2InV2", WaveshareEPaper
 )
-WaveshareEPaper4P2InBV2BWR = waveshare_epaper_ns.class_(
+WaveshareEPaper4P2InBV2BWR = weact_epaper_ns.class_(
     "WaveshareEPaper4P2InBV2BWR", WaveshareEPaperBWR
 )
-WaveshareEPaper5P65InF = waveshare_epaper_ns.class_(
+WaveshareEPaper5P65InF = weact_epaper_ns.class_(
     "WaveshareEPaper5P65InF", WaveshareEPaper7C
 )
-WaveshareEPaper5P8In = waveshare_epaper_ns.class_(
+WaveshareEPaper5P8In = weact_epaper_ns.class_(
     "WaveshareEPaper5P8In", WaveshareEPaper
 )
-WaveshareEPaper5P8InV2 = waveshare_epaper_ns.class_(
+WaveshareEPaper5P8InV2 = weact_epaper_ns.class_(
     "WaveshareEPaper5P8InV2", WaveshareEPaper
 )
-GDEY0583T81 = waveshare_epaper_ns.class_("GDEY0583T81", WaveshareEPaper)
-WaveshareEPaper7P3InF = waveshare_epaper_ns.class_(
+GDEY0583T81 = weact_epaper_ns.class_("GDEY0583T81", WaveshareEPaper)
+WaveshareEPaper7P3InF = weact_epaper_ns.class_(
     "WaveshareEPaper7P3InF", WaveshareEPaper7C
 )
-WaveshareEPaper7P5In = waveshare_epaper_ns.class_(
+WaveshareEPaper7P5In = weact_epaper_ns.class_(
     "WaveshareEPaper7P5In", WaveshareEPaper
 )
-WaveshareEPaper7P5InBC = waveshare_epaper_ns.class_(
+WaveshareEPaper7P5InBC = weact_epaper_ns.class_(
     "WaveshareEPaper7P5InBC", WaveshareEPaper
 )
-WaveshareEPaper7P5InBV2 = waveshare_epaper_ns.class_(
+WaveshareEPaper7P5InBV2 = weact_epaper_ns.class_(
     "WaveshareEPaper7P5InBV2", WaveshareEPaper
 )
-WaveshareEPaper7P5InBV3 = waveshare_epaper_ns.class_(
+WaveshareEPaper7P5InBV3 = weact_epaper_ns.class_(
     "WaveshareEPaper7P5InBV3", WaveshareEPaper
 )
-WaveshareEPaper7P5InBV3BWR = waveshare_epaper_ns.class_(
+WaveshareEPaper7P5InBV3BWR = weact_epaper_ns.class_(
     "WaveshareEPaper7P5InBV3BWR", WaveshareEPaperBWR
 )
-WaveshareEPaper7P5InV2 = waveshare_epaper_ns.class_(
+WaveshareEPaper7P5InV2 = weact_epaper_ns.class_(
     "WaveshareEPaper7P5InV2", WaveshareEPaper
 )
-WaveshareEPaper7P5InV2alt = waveshare_epaper_ns.class_(
+WaveshareEPaper7P5InV2alt = weact_epaper_ns.class_(
     "WaveshareEPaper7P5InV2alt", WaveshareEPaper
 )
-WaveshareEPaper7P5InV2P = waveshare_epaper_ns.class_(
+WaveshareEPaper7P5InV2P = weact_epaper_ns.class_(
     "WaveshareEPaper7P5InV2P", WaveshareEPaper
 )
-WaveshareEPaper7P5InHDB = waveshare_epaper_ns.class_(
+WaveshareEPaper7P5InHDB = weact_epaper_ns.class_(
     "WaveshareEPaper7P5InHDB", WaveshareEPaper
 )
-WaveshareEPaper2P13InDKE = waveshare_epaper_ns.class_(
+WaveshareEPaper2P13InDKE = weact_epaper_ns.class_(
     "WaveshareEPaper2P13InDKE", WaveshareEPaper
 )
-WaveshareEPaper2P13InV2 = waveshare_epaper_ns.class_(
+WaveshareEPaper2P13InV2 = weact_epaper_ns.class_(
     "WaveshareEPaper2P13InV2", WaveshareEPaper
 )
-WaveshareEPaper2P13InV3 = waveshare_epaper_ns.class_(
+WaveshareEPaper2P13InV3 = weact_epaper_ns.class_(
     "WaveshareEPaper2P13InV3", WaveshareEPaper
 )
-WeActEPaper2P9In3C = waveshare_epaper_ns.class_(
+WeActEPaper2P9In3C = weact_epaper_ns.class_(
     "WeActEPaper2P9In3C", WaveshareEPaperBWR
 )
-WeActEPaper4P2In3C = waveshare_epaper_ns.class_(
+WeActEPaper4P2In3C = weact_epaper_ns.class_(
     "WeActEPaper4P2In3C", WaveshareEPaperBWR
 )
-WaveshareEPaper13P3InK = waveshare_epaper_ns.class_(
+WaveshareEPaper13P3InK = weact_epaper_ns.class_(
     "WaveshareEPaper13P3InK", WaveshareEPaper
 )
-GDEW0154M09 = waveshare_epaper_ns.class_("GDEW0154M09", WaveshareEPaper)
+GDEW0154M09 = weact_epaper_ns.class_("GDEW0154M09", WaveshareEPaper)
 
-WaveshareEPaperTypeAModel = waveshare_epaper_ns.enum("WaveshareEPaperTypeAModel")
-WaveshareEPaperTypeBModel = waveshare_epaper_ns.enum("WaveshareEPaperTypeBModel")
+WaveshareEPaperTypeAModel = weact_epaper_ns.enum("WaveshareEPaperTypeAModel")
+WaveshareEPaperTypeBModel = weact_epaper_ns.enum("WaveshareEPaperTypeBModel")
 
 MODELS = {
     "1.54in": ("a", WaveshareEPaperTypeAModel.WAVESHARE_EPAPER_1_54_IN),
@@ -191,7 +191,7 @@ MODELS = {
 
 RESET_PIN_REQUIRED_MODELS = ("2.13inv2", "2.13in-ttgo-b74")
 
-DisplayMode = waveshare_epaper_ns.enum("DisplayMode")
+DisplayMode = weact_epaper_ns.enum("DisplayMode")
 DISPLAY_MODES = {
     "PARTIAL": DisplayMode.MODE_PARTIAL,
     "FULL": DisplayMode.MODE_FULL,
@@ -259,7 +259,7 @@ CONFIG_SCHEMA = cv.All(
 )
 
 FINAL_VALIDATE_SCHEMA = spi.final_validate_device_schema(
-    "waveshare_epaper", require_miso=False, require_mosi=True
+    "weact_epaper", require_miso=False, require_mosi=True
 )
 
 
