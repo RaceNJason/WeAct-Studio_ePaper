@@ -1,9 +1,9 @@
-#include "waveshare_epaper.h"
+#include "weact_epaper.h"
 #include "esphome/core/log.h"
 #include "esphome/core/application.h"
 
 namespace esphome {
-namespace waveshare_epaper {
+namespace weact_epaper {
 
 // It's worth adding some notes for this implementation
 // - This display doesn't ship with a LUT, instead it relies on the internal values set during OTP
@@ -39,6 +39,7 @@ static const uint8_t RAM_Y_RANGE[] = {0x45, 0x00, 0x00, (uint8_t) HEIGHT - 1, (u
 static const uint8_t RAM_X_POS[] = {0x4E, 0x00};  // Always start at 0
 static const uint8_t RAM_Y_POS = 0x4F;
 
+// Helper macro for sending commands with data
 #define SEND(x) this->cmd_data(x, sizeof(x))
 
 // Basics
@@ -165,5 +166,5 @@ void WeActEPaper2P9In3C::display() {
   this->full_update_();
 }
 
-}  // namespace waveshare_epaper
+}  // namespace weact_epaper
 }  // namespace esphome
