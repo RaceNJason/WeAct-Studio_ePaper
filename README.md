@@ -122,6 +122,19 @@ This component is named `weact_epaper` (instead of `waveshare_epaper`) to:
 2. Clearly indicate support for WeAct Studio displays
 3. Allow both components to coexist if needed
 
+### Alternative: Using Override Approach
+
+If you prefer to override the built-in `waveshare_epaper` component instead of using a renamed component, you can use:
+
+```yaml
+external_components:
+  - source: github://Ottes42/WeAct-Studio_ePaper
+    components: [ weact_epaper ]
+    override: [ waveshare_epaper ]
+```
+
+**Note:** The override approach will replace ESPHome's built-in waveshare_epaper component with this one. This can be useful if you want to use the same platform name (`waveshare_epaper`) in your configuration. However, we recommend using the renamed component (`weact_epaper`) to avoid confusion and allow both components to coexist.
+
 ## Contributing
 
 Contributions are welcome! If you have support for additional ePaper displays or improvements, please submit a pull request.
