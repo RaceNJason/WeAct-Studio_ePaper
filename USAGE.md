@@ -303,7 +303,7 @@ external_components:
 ### Specific Commit (Recommended for Production)
 ```yaml
 external_components:
-  - source: github://Ottes42/WeAct-Studio_ePaper@abc1234
+  - source: github://Ottes42/WeAct-Studio_ePaper@1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t  # Replace with actual commit SHA
     components: [ weact_epaper ]
 ```
 
