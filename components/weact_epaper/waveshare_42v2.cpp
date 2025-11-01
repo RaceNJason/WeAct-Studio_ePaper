@@ -3,7 +3,7 @@
 #include "esphome/core/log.h"
 
 namespace esphome {
-namespace waveshare_epaper {
+namespace weact_epaper {
 
 static const char *const TAG = "waveshare_4.2v2";
 
@@ -400,5 +400,5 @@ void WaveshareEPaper4P2InV2::dump_config() {
   LOG_UPDATE_INTERVAL(this);
 }
 
-}  // namespace waveshare_epaper
+}  // namespace weact_epaper
 }  // namespace esphome

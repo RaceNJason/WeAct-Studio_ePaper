@@ -1,0 +1,6 @@
+{
+  "name": "weact_epaper",
+  "codeowners": ["@clydebarrow"],
+  "dependencies": ["spi", "display"],
+  "documentation": "https://github.com/Ottes42/WeAct-Studio_ePaper"
+}
