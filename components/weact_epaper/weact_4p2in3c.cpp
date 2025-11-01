@@ -40,6 +40,7 @@ static const uint8_t RAM_Y_RANGE[] = {0x45, 0x00, 0x00, ((HEIGHT - 1) & 0xFF), (
 static const uint8_t RAM_X_POS[] = {0x4E, 0x00};                // Always start at 0
 static const uint8_t RAM_Y_POS = 0x4F;
 
+// Helper macro for sending commands with data
 #define SEND(x) this->cmd_data(x, sizeof(x))
 
 // Basics

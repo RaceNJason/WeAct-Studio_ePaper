@@ -55,6 +55,8 @@ static const uint8_t RAM_X_START[] = {0x44, 0x00, 121 / 8};           // set ram
 static const uint8_t RAM_Y_START[] = {0x45, 0x00, 0x00, 250 - 1, 0};  // set ram_y_address_start_end
 static const uint8_t RAM_X_POS[] = {0x4E, 0x00};                      // set ram_x_address_counter
 // static const uint8_t RAM_Y_POS[] = {0x4F, 0x00, 0x00};        // set ram_y_address_counter
+
+// Helper macro for sending commands with data
 #define SEND(x) this->cmd_data(x, sizeof(x))
 
 void WaveshareEPaper2P13InV3::write_lut_(const uint8_t *lut) {

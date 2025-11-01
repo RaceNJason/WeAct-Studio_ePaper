@@ -224,7 +224,6 @@ def validate_reset_pin_required(config):
 
 
 def validate_grayscale4_supported(config):
-    print(config[CONF_MODEL])
     if CONF_DISPLAY_MODE in config:
         if config[CONF_MODEL] in ["4.20in-v2"]:
             return config
