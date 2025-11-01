@@ -139,6 +139,18 @@ external_components:
 
 Contributions are welcome! If you have support for additional ePaper displays or improvements, please submit a pull request.
 
+For detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Documentation
+
+- **[README.md](README.md)** - Main documentation (this file)
+- **[USAGE.md](USAGE.md)** - Detailed usage guide with examples
+- **[MIGRATION.md](MIGRATION.md)** - Migration guide for users updating from older versions
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Guidelines for contributors
+- **[Dependency Management](.github/DEPENDENCY_MANAGEMENT.md)** - Dependency strategy (no traditional dependencies)
+- **[Upstream Sources](.github/UPSTREAM_AND_FORK.md)** - Source attribution and update strategy
+- **[Setup Documentation](.github/SETUP.md)** - Complete repository configuration
+
 ## License
 
 This component follows the same license as ESPHome (MIT License).
