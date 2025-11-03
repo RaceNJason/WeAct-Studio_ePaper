@@ -1,16 +1,39 @@
-..........
+# Example ESPHome configuration for WeAct Studio ePaper displays
+# This demonstrates how to use the weact_epaper component as an external component
 
-# Must include this after copying the custom_components folder into your ESPHome configurations folder (or esphome folder in your home assistant installation)
+esphome:
+  name: weact-epaper-display
+  platform: ESP32
+  board: esp32dev
+
+# Include the WeAct ePaper component from GitHub
 external_components:
-  - source: custom_components
+  - source: github://Ottes42/WeAct-Studio_ePaper
+    components: [ weact_epaper ]
 
-..........
+# SPI Configuration (required for ePaper displays)
+spi:
+  clk_pin: GPIO18
+  mosi_pin: GPIO23
 
+# Display configuration
 # Only choose one model of course...
 display:
-  - platform: waveshare_epaper
+  - platform: weact_epaper
     id: epaper_disp
-    model: 4.20in3c         # BWR   400x300
-    model: 4.20in           # BW    400x300
-    model: 2.90in3c         # BWR   296x128
-    
+    cs_pin: GPIO5
+    dc_pin: GPIO17
+    busy_pin: GPIO4
+    reset_pin: GPIO16
+    model: 2.90in3c         # WeAct 2.9" BWR   296x128
+    # model: 4.20in3c       # WeAct 4.2" BWR   400x300
+    # model: 4.20in         # Waveshare 4.2" BW    400x300
+    update_interval: 60s
+    lambda: |-
+      it.print(0, 0, id(font), "Hello World!")
+
+# Example font (optional)
+font:
+  - file: "fonts/arial.ttf"
+    id: font
+    size: 20
