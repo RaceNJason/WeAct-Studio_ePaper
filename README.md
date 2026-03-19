@@ -1,4 +1,6 @@
 # WeAct Studio ePaper Screens
+This repository is now archived and no longer going to be updated or maintained (and may even be eventually deleted). Code for the WeAct screens is now implemented in ESPHome version 2026.3 or newer under the new component [epaper_spi](https://esphome.io/components/display/epaper_spi/). Please convert your code to use the new ESPHome component if you were previously using this.
+*********************************************************************************
 ESPHome custom component for WeAct Studio ePaper screens.
 
 This covers:
