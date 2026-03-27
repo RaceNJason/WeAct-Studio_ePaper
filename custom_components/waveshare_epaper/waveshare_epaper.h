@@ -25,9 +25,6 @@ class WaveshareEPaperBase : public display::DisplayBuffer,
   virtual void initialize() = 0;
   virtual void deep_sleep() = 0;
 
-  // Exposing the busy pin on the display allows for efficient sleep code to maximize battery life...otherwise activating sleep before the display has finished "it's" updating causes it to stop
-  int is_display_busy() { return (this->busy_pin_ == nullptr ? -1 : this->busy_pin_->digital_read()); }
-
   void update() override;
 
   void setup() override {
@@ -679,6 +676,42 @@ class WaveshareEPaper2P13InDKE : public WaveshareEPaper {
 };
 
 class WaveshareEPaper2P13InV3 : public WaveshareEPaper {
+ public:
+  void display() override;
+
+  void dump_config() override;
+
+  void deep_sleep() override {
+    // COMMAND POWER DOWN
+    this->command(0x10);
+    this->data(0x01);
+    // cannot wait until idle here, the device no longer responds
+  }
+
+  void set_full_update_every(uint32_t full_update_every);
+
+  void setup() override;
+  void initialize() override;
+
+ protected:
+  int get_width_controller();
+  int get_width_internal() override;
+  int get_height_internal() override;
+  uint32_t idle_timeout_() override;
+
+  void write_buffer_(uint8_t cmd, int top, int bottom);
+  void set_window_(int t, int b);
+  void send_reset_();
+  void partial_update_();
+  void full_update_();
+
+  uint32_t full_update_every_{30};
+  uint32_t at_update_{0};
+  bool is_busy_{false};
+  void write_lut_(const uint8_t *lut);
+};
+
+class WeActEPaper2P9In : public WaveshareEPaper {
  public:
   void display() override;
 
